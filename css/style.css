@@ -1,0 +1,15 @@
+body,button{
+    font-family: 'Joti One', cursive;
+    background-color:#050714;
+    color: #fff;
+  }
+  fieldset {
+    font-family: 'Indie Flower', cursive;
+  }
+
+  .correcto {
+    color: green;
+  }
+  .incorrecto {
+    color: red;
+  }

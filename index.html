@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Trivia Movie</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+<body>
+  <div class="usuario">
+    <div class="header">
+      <h1>Trivia Movies</h1>
+      <p>Hola, ingresa tu Nombre por favor</p>
+    </div>
+    <form class="form">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre">
+      <button class="btn">Jugar</button>
+    </form>
+  </div>
+  <main class="main">
+    <section class="main-content">
+      <header>
+        <h1>Trivia Movies</h1>
+        <p>Hola <span class="jugador"></span>, veamos cuanto sabes de cine</p>
+      </header>
+      <article>
+        <form class="respuestas">
+          <fieldset>
+            <legend>1. ¿Que actor protagonizo la pelicula "Una esposa de Mentiras"?</legend>
+            <label for="large">
+              <input type="radio" name="rta1" value="false">Brad Pitt
+            </label><br>
+            <label for="large">
+              <input type="radio" name="rta1" value="true">Adam Sandler
+            </label><br>
+            <label for="large">
+              <input type="radio" name="rta1" value="false">Ashton Kutcher
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>2. ¿Cual de estas peliculas fue basada en una historia de la vida real?</legend>
+            <label for="large">
+              <input type="radio" name="rta2" value="false">Avatar
+            </label><br>
+            <label for="large">
+              <input type="radio" name="rta2" value="false">El Señor de los Anillos
+            </label><br>
+            <label for="large">
+              <input type="radio" name="rta2" value="true">El Conjuro
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>3. En la pelicula de Harry Potter ¿Cual es el nombre del mago que se convierte en un perro?</legend>
+            <label for="large">
+              <input type="radio" name="rta3" value="true">Sirius Black
+            </label><br>
+            <label for="large">
+              <input type="radio" name="rta3" value="false">Albus Dumbledore
+            </label><br>
+            <label for="large">
+              <input type="radio" name="rta3" value="false">Severus Snape
+            </label>
+          </fieldset>
+          <button class="responder">Responder</button>      
+        </form>
+        <button class="volver">Volver</button>
+        <p>resultado: <span class="puntaje"></span> </p>
+      </article>
+    </section>
+    <section class="imgs">
+
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+</html>
