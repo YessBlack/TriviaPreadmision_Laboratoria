@@ -13,19 +13,18 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 <body>
-  <div class="usuario">
-    <div class="header">
-      <h1>Trivia Movies</h1>
-      <p>Hola, ingresa tu Nombre por favor</p>
-    </div>
-    <form class="form">
-      <label for="nombre">Nombre</label>
-      <input type="text" name="nombre" id="nombre">
-      <button class="btn">Jugar</button>
-    </form>
-  </div>
   <main class="main">
-    <section class="main-content">
+    <div class="usuario">
+      <div class="header">
+        <h1>Trivia Movies</h1>
+        <p>Hola, ingresa tu Nombre por favor</p>
+      </div>
+      <form class="nombre-usuario">        
+        <input type="text" name="nombre" class="nombre" placeholder="Usuario"><br>
+        <button class="btn-jugar">Jugar</button>
+      </form>
+    </div>
+    <section class="main-content ocultar">
       <header>
         <h1>Trivia Movies</h1>
         <p>Hola <span class="jugador"></span>, veamos cuanto sabes de cine</p>
@@ -75,10 +74,12 @@
       </article>
     </section>
     <section class="imgs">
-
+      <img src="img/hobbit.webp" alt="" class="img-bordes">
+      <img src="img/Lightyear.jpeg" alt="">
+      <img src="img/hp.jpg" alt="">
+      <img src="img/Vengadores.jpg" alt="">
     </section>
   </main>
   <script src="js/app.js"></script>
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
 </body>
 </html>

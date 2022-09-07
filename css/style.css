@@ -1,15 +1,51 @@
+*,*::after,*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body,button{
     font-family: 'Joti One', cursive;
     background-color:#050714;
     color: #fff;
-  }
-  fieldset {
+}
+fieldset {
     font-family: 'Indie Flower', cursive;
-  }
-
-  .correcto {
+    border: none;
+}
+img {
+  width: 120px;
+  height: 100vh;
+  object-fit: cover;
+}
+.correcto {
     color: green;
-  }
-  .incorrecto {
+}
+.incorrecto {
     color: red;
-  }
+}
+.ocultar {
+  display: none;
+}
+.mostrar {
+  display: block;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+.img-bordes {
+  border-radius: 0 0 0 100px;
+}
+.imgs {
+  background-color: black;
+  border-radius: 0 0 0 100px;
+}
+.usuario {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+

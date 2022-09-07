@@ -1,9 +1,17 @@
 // funcion para seleccionar elementos del DOM
 const $ = selector => document.querySelector(selector)
 
-// Solicitar nombre del jugador
-let nombre = prompt('¿Cual es tu nombre?')
-$('.jugador').innerHTML = nombre
+const nombreJugador = () => {
+  $('.btn-jugar').addEventListener('click',e => {
+    e.preventDefault()
+    let nombre = $('.nombre').value
+    if(nombre === '') return alert('Debes ingresar un nombre')
+    $('.jugador').innerHTML = nombre
+    $('.usuario').classList.add('ocultar')
+    $('.main-content').classList.add('mostrar')
+    $('.main-content').classList.remove('ocultar')
+  })
+}
 
 //Puntaje
 let total = 0
@@ -35,3 +43,7 @@ $('.respuestas').addEventListener('submit', e => {
   validarRespuestas()
 })
 
+//Apenas cargue la pagina
+document.addEventListener('DOMContentLoaded', () => { 
+  nombreJugador()
+})
