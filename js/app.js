@@ -1,49 +1,57 @@
-// funcion para seleccionar elementos del DOM
+//funcion para seleccionar elementos del DOM
 const $ = selector => document.querySelector(selector)
-
-const nombreJugador = () => {
-  $('.btn-jugar').addEventListener('click',e => {
+// Capturar el nombre del jugardor
+const jugador = ()=> {
+  $(".btn-jugar").addEventListener("click", e=>{
     e.preventDefault()
-    let nombre = $('.nombre').value
-    if(nombre === '') return alert('Debes ingresar un nombre')
-    $('.jugador').innerHTML = nombre
-    $('.usuario').classList.add('ocultar')
-    $('.main-content').classList.add('mostrar')
-    $('.main-content').classList.remove('ocultar')
-  })
+  let nombre = $(".nombre").value
+    if (nombre === "") return alert("Debes ingresar tu nombre")
+    $(".jugador").innerHTML=nombre 
+    $(".pagina1").classList.add("ocultar")
+    $(".pagina2").classList.add("mostrar")
+    $(".pagina2").classList.remove("ocultar")
+  }) 
 }
 
-//Puntaje
-let total = 0
-const puntaje = (data) => {
-  for (const respuesta in data) {
-    (data[respuesta] === 'true') ? total += 1 : total += 0
-  }
-  $('.puntaje').innerHTML = total
-}
-
-//Colorear respuestas correctas
-const validarRespuestas = () => {
-  const inputs = document.querySelectorAll('input')
-  inputs.forEach(input => {
-    if(input.checked === true) {
-      (input.value === 'true') 
-      ? input.parentElement.classList.add('correcto') 
-      : input.parentElement.classList.add('incorrecto')
+//Funcion para calcular y mostrar el puntaje
+let puntos = 0;
+const puntaje = (datos) => {
+  console.log(datos)
+  for (const respuesta in datos) {
+    if (datos[respuesta] === "true"){
+      puntos+=1;
+    }else {
+      puntos+=0;
     }
-    input.disabled = true
-  })
+  } 
+  console.log(puntos);
+  $(".puntaje").innerHTML= puntos;
 }
-
-//Submit de Comprobar respuestas
-$('.respuestas').addEventListener('submit', e => {
-  e.preventDefault()
-  let data = Object.fromEntries(new FormData(e.target))
-  puntaje(data)
-  validarRespuestas()
+const validacion = () => {
+  const inputs = document.querySelectorAll("input")
+  inputs.forEach(input => {
+  if (input.checked){
+    if (input.value === "true"){
+      input.parentElement.classList.add("correcto")
+    }else {
+      input.parentElement.classList.add("incorrecto")
+    }
+  }
+  input.disabled = true
+})
+} 
+// boton volver
+$(".volver").addEventListener("click", () => {
+  location.reload()
 })
 
-//Apenas cargue la pagina
-document.addEventListener('DOMContentLoaded', () => { 
-  nombreJugador()
+//boton de respuestas del formulario
+$('.respuestas').addEventListener('submit', e => {
+  e.preventDefault()
+  let datos = Object.fromEntries(new FormData(e.target))
+  puntaje(datos);
+  validacion()
+})
+document.addEventListener("DOMContentLoaded", () =>{
+  jugador()
 })

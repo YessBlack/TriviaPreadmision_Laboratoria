@@ -1,27 +1,36 @@
-*,*::after,*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*,*::after, *::before {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
+
 body,button{
-    font-family: 'Joti One', cursive;
-    background-color:#050714;
-    color: #fff;
+  font-family: 'Joti One', cursive;
+  background-color:#050714;
+  color: #fff;
+  font-size: 1.2rem;
+}
+h1,h2 {
+  font-size:3rem;
+  color:#01B0D6; 
+  line-height: 7rem;
+  text-align: center;
+}
+p {
+  text-align: center;
 }
 fieldset {
-    font-family: 'Indie Flower', cursive;
-    border: none;
+  font-family: 'Indie Flower', cursive;
 }
-img {
-  width: 120px;
-  height: 100vh;
-  object-fit: cover;
+::placeholder {
+  color: #676767;
+  text-align: center;
 }
 .correcto {
-    color: green;
+  color: green;
 }
 .incorrecto {
-    color: red;
+  color: red;
 }
 .ocultar {
   display: none;
@@ -29,23 +38,60 @@ img {
 .mostrar {
   display: block;
 }
+img {
+  width: 120px;
+  height: 100vh;
+  object-fit: cover;
+  margin: 0;
+}
 .main {
   display: flex;
   justify-content: space-between;
+  margin:0;
 }
-.img-bordes {
-  border-radius: 0 0 0 100px;
-}
-.imgs {
+.imagenes, .borde {
   background-color: black;
-  border-radius: 0 0 0 100px;
+  border-radius: 0 0 0 100px; 
+  display: flex;
 }
-.usuario {
-  height: 100vh;
+.imagenes img {
+   padding-right:.2rem ;
+}
+.pagina1 {
+  
+  margin: auto;
+}
+.centrar{
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  box-shadow: #fff 0px 1px 4px;
+  padding: 3rem;
+  border-radius: 20px;
+}
+.nombre-usuario {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
+  width: 100%;
 }
-
+.nombre{
+  border:none;
+  padding:1rem;
+  display: block;
+  border-radius: 10px;
+  background-color:#1E1E1E;
+  color:white;
+  text-align: center;
+  outline:none;
+  width: 100%;
+}
+.btn-jugar{
+  padding:.7rem;
+  background-color:#6421FF;
+  border:none;
+  border-radius: 10px;
+  margin: 4rem auto;
+}
