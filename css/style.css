@@ -16,11 +16,24 @@ h1,h2 {
   line-height: 7rem;
   text-align: center;
 }
+h2 {
+  line-height: 5rem;
+}
 p {
   text-align: center;
 }
 fieldset {
   font-family: 'Indie Flower', cursive;
+  border: none;
+}
+img {
+  width: 120px;
+  height: 100vh;
+  object-fit: cover;
+  margin: 0;
+}
+fieldset label {
+  margin-left: 3rem;
 }
 ::placeholder {
   color: #676767;
@@ -38,12 +51,6 @@ fieldset {
 .mostrar {
   display: block;
 }
-img {
-  width: 120px;
-  height: 100vh;
-  object-fit: cover;
-  margin: 0;
-}
 .main {
   display: flex;
   justify-content: space-between;
@@ -57,11 +64,13 @@ img {
 .imagenes img {
    padding-right:.2rem ;
 }
-.pagina1 {
-  
+.pagina1,.pagina2 {
   margin: auto;
 }
-.centrar{
+.pagina2 {
+  margin-top: 0;
+}
+.centrar {
   margin: auto;
   display: grid;
   gap: 1rem;
@@ -88,10 +97,31 @@ img {
   outline:none;
   width: 100%;
 }
-.btn-jugar{
+.btn-cta,.volver{
   padding:.7rem;
   background-color:#6421FF;
   border:none;
   border-radius: 10px;
+}
+.btn-jugar {
   margin: 4rem auto;
+}
+.volver {
+  background-color: #0D154D;
+}
+.respuestas {
+  margin-top: 3rem;
+  line-height: 2rem;
+}
+.botones {
+  display: flex;
+  justify-content: space-around;
+}
+.botones button {
+  margin-top: 1rem;
+  width: 30%;
+}
+.puntos {
+  margin-top: 1rem;
+  color: #01B0D6;
 }
